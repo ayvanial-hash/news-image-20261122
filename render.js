@@ -1,7 +1,5 @@
-
 const { chromium } = require('playwright-core');
 const fs = require('fs');
-const path = require('path');
 
 (async () => {
   const browser = await chromium.launch();
@@ -13,49 +11,39 @@ const path = require('path');
     <html lang="en">
     <head>
       <style>
-        body { font-family: sans-serif; background: #f0f0f0; margin: 0; padding: 20px; width: 1024px; height: 1024px; box-sizing: border-box; }
-        h1 { font-size: 48px; text-align: center; margin-bottom: 30px; color: #333; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        .block { padding: 20px; border-radius: 10px; color: white; }
-        h2 { font-size: 24px; margin: 0 0 10px 0; }
-        p { font-size: 16px; margin: 0; }
+        body { font-family: 'Times New Roman', serif; background: #fff; margin: 0; padding: 40px; width: 1024px; height: 1024px; box-sizing: border-box; color: #1a1a1a; }
+        h1 { font-size: 40px; text-align: center; margin: 0 0 30px 0; padding-bottom: 15px; border-bottom: 4px solid #000; text-transform: uppercase; font-weight: bold; }
+        .story { padding: 15px; margin-bottom: 20px; border-left: 10px solid #ccc; background: #fff; }
+        h2 { font-size: 36px; font-weight: bold; margin: 0 0 10px 0; color: #000; text-transform: uppercase; }
+        p { font-size: 19px; margin: 5px 0; line-height: 1.3; color: #1a1a1a; }
       </style>
     </head>
     <body>
-      <h1>SUNDAY, 22 NOVEMBER 2026</h1>
-      <div class="grid">
-        <div class="block" style="background: #e63946;">
-          <h2>COP31 Bubar: EU Tolak Pakta Antalya</h2>
-          <p>Sidang pleno COP31 Antalya berakhir tanpa kesepakatan setelah EU dan negara lain menolak draf yang mengabaikan bahan bakar fosil.</p>
-        </div>
-        <div class="block" style="background: #457b9d;">
-          <h2>Menhan Pendidikan Korsel Choi Mundur</h2>
-          <p>Choi Kyo-jin mengundurkan diri pasca skandal kecurangan AI massal pada ujian masuk Suneung di Korea Selatan.</p>
-        </div>
-        <div class="block" style="background: #2a9d8f;">
-          <h2>India 720/9 di Wellington, Rekor 96 Tahun</h2>
-          <p>India mencatatkan total Tes tertinggi di Selandia Baru dalam 96 tahun dalam pertandingan kriket di Wellington.</p>
-        </div>
-        <div class="block" style="background: #f4a261;">
-          <h2>PM Nepal Balendra Shah Tiba di New Delhi</h2>
-          <p>PM Nepal Balendra Shah memulai kunjungan resmi dua hari ke India, pertemuan pertama dengan PM Modi.</p>
-        </div>
-        <div class="block" style="background: #264653;">
-          <h2>9 Tewas Kecelakaan Cruiser di Kota-Udaipur</h2>
-          <p>Sembilan anggota keluarga tewas dalam kecelakaan Cruiser di Rajasthan saat dalam perjalanan pulang.</p>
-        </div>
-        <div class="block" style="background: #6a4c93;">
-          <h2>Houthi: Serangan Sanaa, 6 Pekerja Luka</h2>
-          <p>Serangan udara menghantam stasiun bahan bakar di Sanaa, Yaman, menyebabkan enam pekerja terluka.</p>
-        </div>
-        <div class="block" style="background: #bc6c25;">
-          <h2>Trump Tunjuk Barrack Utusan Suriah–Irak</h2>
-          <p>Presiden Trump menunjuk Tom Barrack sebagai utusan khusus untuk Suriah dan Irak.</p>
-        </div>
-        <div class="block" style="background: #283618;">
-          <h2>Brussels Airport Batalkan Penerbangan Senin</h2>
-          <p>Sebagian besar penerbangan di Bandara Brussels dibatalkan Senin karena mogok nasional pengatur lalu lintas udara.</p>
-        </div>
+      <h1>THE WORLD - SUNDAY, NOVEMBER 22, 2026</h1>
+      <div class="story" style="border-left-color: #e63946;">
+        <h2>COP31 COLLAPSES: EU REJECTS ANTALYA PACT</h2>
+        <p>COP31 in Antalya ended without a deal on Sunday after nations rejected the final draft.</p>
+        <p>This is the first climate summit failure in 17 years and the longest in history.</p>
+      </div>
+      <div class="story" style="border-left-color: #457b9d;">
+        <h2>S. KOREA EDUCATION MINISTER CHOI RESIGNS</h2>
+        <p>Minister Choi Kyo-jin resigned following a massive AI-assisted cheating scandal.</p>
+        <p>111 students were caught using smart devices, prompting calls for a 10-year ban.</p>
+      </div>
+      <div class="story" style="border-left-color: #2a9d8f;">
+        <h2>INDIA SCORES 720/9 IN WELLINGTON, 96-YEAR RECORD</h2>
+        <p>India recorded its highest-ever away Test total in Wellington on Sunday.</p>
+        <p>Centuries from KL Rahul and Rishabh Pant secured a 352-run first-innings lead.</p>
+      </div>
+      <div class="story" style="border-left-color: #f4a261;">
+        <h2>NEPAL PM BALENDRA SHAH ARRIVES IN NEW DELHI</h2>
+        <p>PM Balendra Shah arrived in New Delhi for his first official foreign visit.</p>
+        <p>The 34-member delegation is focusing on energy and connectivity initiatives.</p>
+      </div>
+      <div class="story" style="border-left-color: #264653;">
+        <h2>FBI CONFIRMS MAJOR NCIC DATABASE BREACH</h2>
+        <p>The FBI has confirmed a major security breach of the NCIC database.</p>
+        <p>A full-scale cybersecurity investigation is underway to assess the impact.</p>
       </div>
     </body>
     </html>
