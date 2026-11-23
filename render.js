@@ -11,11 +11,11 @@ const fs = require('fs');
     <html lang="en">
     <head>
       <style>
-        body { font-family: 'Times New Roman', serif; background: #fff; margin: 0; padding: 40px; width: 1024px; height: 1024px; box-sizing: border-box; color: #1a1a1a; }
-        h1 { font-size: 40px; text-align: center; margin: 0 0 30px 0; padding-bottom: 15px; border-bottom: 4px solid #000; text-transform: uppercase; font-weight: bold; }
-        .story { padding: 15px; margin-bottom: 20px; border-left: 10px solid #ccc; background: #fff; }
-        h2 { font-size: 36px; font-weight: bold; margin: 0 0 10px 0; color: #000; text-transform: uppercase; }
-        p { font-size: 19px; margin: 5px 0; line-height: 1.3; color: #1a1a1a; }
+        body { font-family: 'Times New Roman', serif; background: #fff; margin: 0; padding: 20px; width: 1024px; height: 1024px; box-sizing: border-box; color: #1a1a1a; overflow: hidden; }
+        h1 { font-size: 36px; text-align: center; margin: 0 0 20px 0; padding-bottom: 10px; border-bottom: 4px solid #000; text-transform: uppercase; font-weight: bold; }
+        .story { padding: 10px; margin-bottom: 10px; border-left: 10px solid #ccc; background: #fff; }
+        h2 { font-size: 30px; font-weight: bold; margin: 0 0 5px 0; color: #000; text-transform: uppercase; }
+        p { font-size: 18px; margin: 2px 0; line-height: 1.2; color: #1a1a1a; }
       </style>
     </head>
     <body>
@@ -50,6 +50,6 @@ const fs = require('fs');
   `;
 
   await page.setContent(html);
-  await page.screenshot({ path: 'entry.png', fullPage: true });
+  await page.screenshot({ path: 'entry.png', clip: {x: 0, y: 0, width: 1024, height: 1024} });
   await browser.close();
 })();
